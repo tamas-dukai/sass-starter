@@ -1,0 +1,191 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    box-sizing: border-box;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+::placeholder {
+    font-size: .8rem;
+    font-style: italic;
+    color:rgba(58, 57, 57, 0.39);
+}
+
+:focus {
+    outline: 0;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -o-box-shadow: none !important
+}
+
+body {
+    font-family: inherit;
+    line-height: inherit;
+    background-color: $white;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    border-style: none;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+
+// TYPOGRAPHY
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    color: $headingColor;
+    margin: 0.67rem 0;
+}
+
+h1 {
+    font-size: $font-h1;
+    font-weight: 800;
+    line-height: 3.8rem;
+    @include bp-maxw(md) {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+}
+
+h2 {
+    font-size: $font-h2;
+    font-weight: 800;
+    line-height: 3.2rem;
+    @include bp-maxw(md) {
+        font-size: 1.9rem;
+        line-height: 2.8rem;
+    }
+}
+
+h3 {
+    font-size: $font-h3;
+    font-weight: 800;
+    line-height: 3rem;
+    @include bp-maxw(md) {
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+    }
+}
+
+h4 {
+    font-size: $font-h4;
+    font-weight: 600;
+    line-height: 2.8rem;
+    @include bp-maxw(md) {
+        font-size: 1.6rem;
+        line-height: 2.5rem;
+    }
+}
+
+h5 {
+    font-size: $font-h5;
+    font-weight: 600;
+    line-height: 2.7rem;
+    @include bp-maxw(md) {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+}
+
+h6 {
+    font-size: $font-h6;
+    font-weight: 600;
+    line-height: 2.6rem;
+    @include bp-maxw(md) {
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+    }
+}
+
+p {
+    font-family: inherit;
+    font-size: $font-md;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: $primaryTextColor;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+a {
+    font-family: inherit;
+    font-size: $font-md;
+    line-height: 1.8rem;
+    transition: all 0.2s ease-in-out 0s;
+    color: $linkColor;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $linkHoverColor;
+    transition: all 0.3s ease;
+}
+
+a:visited {
+    color: $linkVisitedColor;
+}
+
+a:active {
+    color: $linkActiveColor;
+}

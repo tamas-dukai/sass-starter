@@ -1,0 +1,11 @@
+.hide-on-mobile {
+    @include bp-maxw(sm) {
+        display: none;
+    }
+}
+
+.hide-on-desktop {
+    @include bp-minw(xl) {
+        display: none;
+    }
+}

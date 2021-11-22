@@ -1,0 +1,39 @@
+// GRADIENTS 
+@mixin verticalGradient($fromColor, $toColor) {
+    background-image: linear-gradient(to bottom, $fromColor, $toColor);
+}
+
+@mixin horizontalGradient($fromColor, $toColor) {
+    background-image: linear-gradient(to right, $fromColor, $toColor);
+}
+
+
+// MEDIA QUERY SASS MAP
+$bps-minw: (
+    "sm": "36em", // 576px
+    "md": "48em", // 768px
+    "lg": "62em", // 992px
+    "xl": "75em", // 1200px
+    "xxl": "87.5em" // 1400px
+);
+
+$bps-maxw: (
+    "sm": "36em", // 576px
+    "md": "48em", // 768px
+    "lg": "62em", // 992px
+    "xl": "75em", // 1200px
+    "xxl": "87.5em" // 1400px
+);
+
+// MEDIA QUERY MIXINS
+@mixin bp-minw($size) {
+    @media (min-width: map-get($bps-minw, $size)) {
+        @content;
+    }
+}
+
+@mixin bp-maxw($size) {
+    @media (max-width: map-get($bps-maxw, $size)) {
+        @content;
+    }
+}
