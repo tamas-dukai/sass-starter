@@ -1,11 +1,70 @@
+.container {
+    margin: 0 auto;
+
+    @include bp-minw-xxl {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+    @include bp-xl-xxl {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    @include bp-lg-xl {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    @include bp-md-lg {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    @include bp-sm-md {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    @include bp-maxw-sm {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.hide-stuff {
+    visibility: hidden;
+} 
+
 .hide-on-mobile {
-    @include bp-maxw(sm) {
+    @include bp-maxw-sm {
         display: none;
     }
 }
 
 .hide-on-desktop {
-    @include bp-minw(xl) {
+    @include bp-minw-lg {
         display: none;
+    }
+}
+
+.flex {
+    display: flex;
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
     }
 }

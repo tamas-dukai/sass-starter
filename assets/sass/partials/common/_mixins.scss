@@ -8,32 +8,104 @@
 }
 
 
-// MEDIA QUERY SASS MAP
-$bps-minw: (
-    "sm": "36em", // 576px
-    "md": "48em", // 768px
-    "lg": "62em", // 992px
-    "xl": "75em", // 1200px
-    "xxl": "87.5em" // 1400px
-);
-
-$bps-maxw: (
-    "sm": "36em", // 576px
-    "md": "48em", // 768px
-    "lg": "62em", // 992px
-    "xl": "75em", // 1200px
-    "xxl": "87.5em" // 1400px
-);
-
 // MEDIA QUERY MIXINS
-@mixin bp-minw($size) {
-    @media (min-width: map-get($bps-minw, $size)) {
+
+// Up to 576px or 36em
+@mixin bp-maxw-sm {
+    @media (max-width: 36em) { 
         @content;
     }
 }
 
-@mixin bp-maxw($size) {
-    @media (max-width: map-get($bps-maxw, $size)) {
+// Up to 768px or 48em
+@mixin bp-maxw-md {
+    @media (max-width: 48em) { 
+        @content;
+    }
+}
+
+// Up to 992px or 62em
+@mixin bp-maxw-lg {
+    @media (max-width: 62em) { 
+        @content;
+    }
+}
+
+// Up to 1200px or 75em
+@mixin bp-maxw-xl {
+    @media (max-width: 75em) { 
+        @content;
+    }
+}
+
+// Up to 1400px or 87.5em
+@mixin bp-maxw-xxl {
+    @media (max-width: 87.5em) { 
+        @content;
+    }
+}
+
+
+// Between 576px - 768px
+@mixin bp-sm-md {
+    @media (min-width: 36em) and (max-width: 48em) { 
+        @content;
+    }
+}
+
+// Between 768px - 992px
+@mixin bp-md-lg {
+    @media (min-width: 48em) and (max-width: 62em) { 
+        @content;
+    }
+}
+
+// Between 992px - 1200px
+@mixin bp-lg-xl {
+    @media (min-width: 62em) and (max-width: 75em) { 
+        @content;
+    }
+}
+
+// Between 1200px - 1400px
+@mixin bp-xl-xxl {
+    @media (min-width: 75em) and (max-width: 87.5em) { 
+        @content;
+    }
+}
+
+
+// Minimum (from) 576px
+@mixin bp-minw-sm {
+    @media (min-width: 36em) { 
+        @content;
+    }
+}
+
+// Minimum (from) 768px
+@mixin bp-minw-md {
+    @media (min-width: 48em) { 
+        @content;
+    }
+}
+
+// Minimum (from) 992px
+@mixin bp-minw-lg {
+    @media (min-width: 62em) { 
+        @content;
+    }
+}
+
+// Minimum (from) 1200px
+@mixin bp-minw-xl {
+    @media (min-width: 75em) { 
+        @content;
+    }
+}
+
+// Minimum (from) 1400px
+@mixin bp-minw-xxl {
+    @media (min-width: 87.5em) { 
         @content;
     }
 }
